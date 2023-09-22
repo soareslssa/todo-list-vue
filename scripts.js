@@ -10,7 +10,11 @@ const App = {
       newTask: {},
     };
   },
-  methods: {},
+  methods: {
+    clearAll: function(){
+      this.todoList = [];
+    }
+  },
 };
 
 Vue.createApp(App).mount("#app");
