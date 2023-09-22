@@ -6,6 +6,9 @@ const App = {
       newTask: {done: false},
     };
   },
+  created() {
+    this.todos = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : this.todos;
+  },
   methods: {
     addNewTask: function(){
       if(this.newTask.text){
