@@ -1,8 +1,4 @@
-var todos = [
-  { text: "Aprender o básico de Vue JS", 
-  done: true },
-  { text: "Aprender o básico de React", done: false },
-];
+var todos = [];
 const App = {
   data() {
     return {

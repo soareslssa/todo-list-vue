@@ -31,7 +31,7 @@
 
                 <button class="clear" 
                 @click="todos = []"
-                v-if="todos"
+                v-if="todos.length"
                 >Limpar tudo</button>
 
                 <input type="text" v-model="newTask.text" placeholder="Escreva uma nova tarefa...">
