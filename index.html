@@ -34,7 +34,7 @@
                 v-if="todos.length"
                 >Limpar tudo</button>
 
-                <input type="text" v-model="newTask.text" placeholder="Escreva uma nova tarefa...">
+                <input type="text" @keyup.enter="addNewTask()" v-model="newTask.text" placeholder="Escreva uma nova tarefa...">
                 <button class="add" @click="addNewTask()">Adicionar</button>
 
                 <div class="instructions">
