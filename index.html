@@ -20,15 +20,11 @@
                 
                 <h3>Lista de Tarefas</h3>
                 
-                <div class="all-todos">
-                    <div class="single-todo done">
-                        <p>Aprender HTML, CSS e Javascript</p>
-                    </div>
-                    <div class="single-todo done">
-                        <p>Aprender o básico de Vue JS</p>
-                    </div>
-                    <div class="single-todo">
-                        <p>Completar o desafio de Vue JS com excelência</p>
+                <div v-for="task in todoList" class="all-todos">
+                    <div class="single-todo" 
+                         :class="{done : task.done}"
+                         @click="task.done = !task.done">
+                        <p>{{task.message}}</p>
                     </div>
 
                 </div>

@@ -1,11 +1,16 @@
+var todoList = [
+  { message: "Aprender o básico de Vue JS", 
+  done: true },
+  { message: "Aprender o básico de React", done: false },
+];
 const App = {
-  data (){
+  data() {
     return {
-      message: 'HELLO WORLD!'
-    }
+      todoList: window.todoList,
+      newTask: {},
+    };
   },
-  methods: {}
-
+  methods: {},
 };
 
-Vue.createApp(App).mount('#app');
+Vue.createApp(App).mount("#app");
