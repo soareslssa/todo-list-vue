@@ -1,23 +1,20 @@
 var todoList = [
-  { message: "Aprender o básico de Vue JS", 
+  { text: "Aprender o básico de Vue JS", 
   done: true },
-  { message: "Aprender o básico de React", done: false },
+  { text: "Aprender o básico de React", done: false },
 ];
 const App = {
   data() {
     return {
       todoList: window.todoList,
-      newTask: {},
+      newTask: {done: false},
     };
   },
   methods: {
-    clearAll: function(){
-      this.todoList = [];
-    },
     addNewTask: function(){
-      if(this.newTask.message){
+      if(this.newTask.text){
         this.todoList.push(this.newTask);
-        this.newTask = {};
+        this.newTask = {done: false};
       }
     }
   },

@@ -24,14 +24,14 @@
                     <div class="single-todo" 
                          :class="{done : task.done}"
                          @click="task.done = !task.done">
-                        <p>{{task.message}}</p>
+                        <p>{{task.text}}</p>
                     </div>
 
                 </div>
 
-                <button class="clear" @click="clearAll()">Limpar tudo</button>
+                <button class="clear" @click="todoList = []">Limpar tudo</button>
 
-                <input type="text" v-model="newTask.message" placeholder="Escreva uma nova tarefa...">
+                <input type="text" v-model="newTask.text" placeholder="Escreva uma nova tarefa...">
                 <button class="add" @click="addNewTask()">Adicionar</button>
 
                 <div class="instructions">
