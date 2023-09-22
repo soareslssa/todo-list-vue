@@ -1,4 +1,4 @@
-var todoList = [
+var todos = [
   { text: "Aprender o básico de Vue JS", 
   done: true },
   { text: "Aprender o básico de React", done: false },
@@ -6,14 +6,14 @@ var todoList = [
 const App = {
   data() {
     return {
-      todoList: window.todoList,
+      todos: window.todos,
       newTask: {done: false},
     };
   },
   methods: {
     addNewTask: function(){
       if(this.newTask.text){
-        this.todoList.push(this.newTask);
+        this.todos.push(this.newTask);
         this.newTask = {done: false};
       }
     }
