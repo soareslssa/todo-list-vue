@@ -13,6 +13,12 @@ const App = {
   methods: {
     clearAll: function(){
       this.todoList = [];
+    },
+    addNewTask: function(){
+      if(this.newTask.message){
+        this.todoList.push(this.newTask);
+        this.newTask = {};
+      }
     }
   },
 };
